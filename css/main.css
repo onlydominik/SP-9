@@ -1,0 +1,23 @@
+strong:after {
+  position: relative;
+  content: "/";
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+/*
+@each $nazwa, $numer in $fonts {
+  @font-face {
+    font-family: "Hanken Grotesk";
+    src: url(https://fonts.google.com/specimen/Hanken+Grotesk);
+  }
+}*/
+body {
+  font-family: "Hanken Grotesk";
+}
+
+/*# sourceMappingURL=main.css.map */

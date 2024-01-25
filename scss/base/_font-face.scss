@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+$fonts: (
+  normal: 500,
+  semibold: 700,
+  bold: 800,
+);
+/*
+@each $nazwa, $numer in $fonts {
+  @font-face {
+    font-family: "Hanken Grotesk";
+    src: url(https://fonts.google.com/specimen/Hanken+Grotesk);
+  }
+}*/
