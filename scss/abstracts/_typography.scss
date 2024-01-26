@@ -1,6 +1,26 @@
+strong {
+  color: var(--clr-blue-700);
+  font-weight: var(--fw-700);
+}
 strong:after {
   position: relative;
   content: "/";
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0.3em;
+  margin-right: 0.2em;
+  color: var(--clr-grey-300);
+  bottom: 0.1em;
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+#result-title {
+  color: var(--clr-grey-200);
+}
+
+#summary-title {
+  align-self: start;
+  color: var(--clr-blue-700);
 }

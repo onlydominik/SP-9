@@ -1,0 +1,52 @@
+$colors: (
+  red: (
+    100: rgba(255, 87, 87, 0.09),
+    500: hsl(0, 100%, 67%),
+  ),
+  yellow: (
+    100: hsla(39, 100%, 56%, 0.09),
+    500: hsl(39, 100%, 56%),
+  ),
+
+  teal: (
+    100: hsla(166, 100%, 37%, 0.09),
+    500: hsl(166, 100%, 37%),
+  ),
+  blue: (
+    100: hsla(234, 85%, 45%, 0.09),
+    500: hsl(234, 85%, 45%),
+    700: hsl(224, 30%, 27%),
+  ),
+  white: (
+    100: hsl(0, 0%, 100%),
+  ),
+  grey: (
+    100: hsla(0, 0%, 100%, 0.39),
+    200: hsla(0, 0%, 100%, 0.616),
+    300: hsl(0, 0%, 62%),
+  ),
+);
+
+$shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+$gradients: (
+  blue: (
+    100: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)),
+    500: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)),
+  ),
+);
+
+:root {
+  // COLORS //
+  @each $category, $subcategory in $colors {
+    @each $name, $value in $subcategory {
+      --clr-#{$category}-#{$name}: #{$value};
+    }
+  }
+  // GRADIENTS //
+  @each $category, $subcategory in $gradients {
+    @each $name, $value in $subcategory {
+      --clr-grd-#{$category}-#{$name}: #{$value};
+    }
+  }
+}
