@@ -1,0 +1,18 @@
+@use "../abstracts/colors";
+
+.score {
+  border-radius: 50%;
+  background: var(--clr-grd-blue-500);
+  padding: 1rem;
+  aspect-ratio: 1 / 1;
+}
+
+.score h1 {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-800);
+  color: var(--clr-white-100);
+}
+
+.score p {
+  color: var(--clr-grey-100);
+}

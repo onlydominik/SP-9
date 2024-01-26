@@ -1,23 +1,244 @@
+strong {
+  color: var(--clr-blue-700);
+  font-weight: var(--fw-700);
+}
+
 strong:after {
   position: relative;
   content: "/";
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0.3em;
+  margin-right: 0.2em;
+  color: var(--clr-grey-300);
+  bottom: 0.1em;
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+#result-title {
+  color: var(--clr-grey-200);
+}
+
+#summary-title {
+  align-self: start;
+  color: var(--clr-blue-700);
+}
+
+:root {
+  --clr-red-100: rgba(255, 87, 87, 0.09);
+  --clr-red-500: hsl(0, 100%, 67%);
+  --clr-yellow-100: hsla(39, 100%, 56%, 0.09);
+  --clr-yellow-500: hsl(39, 100%, 56%);
+  --clr-teal-100: hsla(166, 100%, 37%, 0.09);
+  --clr-teal-500: hsl(166, 100%, 37%);
+  --clr-blue-100: hsla(234, 85%, 45%, 0.09);
+  --clr-blue-500: hsl(234, 85%, 45%);
+  --clr-blue-700: hsl(224, 30%, 27%);
+  --clr-white-100: hsl(0, 0%, 100%);
+  --clr-grey-100: hsla(0, 0%, 100%, 0.39);
+  --clr-grey-200: hsla(0, 0%, 100%, 0.616);
+  --clr-grey-300: hsl(0, 0%, 62%);
+  --clr-grd-blue-100: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  --clr-grd-blue-500: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
 }
 
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(/fonts/HankenGrotesk-VariableFont_wght.ttf);
+  src: url(/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 500;
 }
-/*
-@each $nazwa, $numer in $fonts {
-  @font-face {
-    font-family: "Hanken Grotesk";
-    src: url(https://fonts.google.com/specimen/Hanken+Grotesk);
-  }
-}*/
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 800;
+}
+:root {
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fs-500: 1rem;
+  --fs-600: 1.0625rem;
+  --fs-700: 1.25rem;
+  --fs-900: 3rem;
+}
+
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+:root {
+  font-size: 100%;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: var(--fw-700);
+  background-color: var(--clr-blue-700);
+  color: var(--clr-white-100);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.sec {
+  min-height: 100%;
+  justify-content: space-between !important;
+  border-radius: 0 0 1rem 1rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.sec--primary {
+  background: var(--clr-grd-blue-100);
+}
+.sec--primary h2 {
+  color: var(--clr-white-100);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.5px;
+  margin-bottom: -0.5em;
+}
+.sec--primary p {
+  color: var(--clr-grey-200);
+}
+
+.sec--secondary {
+  background: var(--clr-white-100);
+}
+
+.card {
+  border-radius: 0 0 1rem 1rem;
+  align-items: stretch !important;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.score {
+  border-radius: 50%;
+  background: var(--clr-grd-blue-500);
+  padding: 1rem;
+  aspect-ratio: 1/1;
+}
+
+.score h1 {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-800);
+  color: var(--clr-white-100);
+}
+
+.score p {
+  color: var(--clr-grey-100);
+}
+
+.summary__items {
+  width: 100%;
+}
+.summary__items div:nth-child(1) {
+  display: flex;
+  gap: 0.5em;
+}
+.summary__items li {
+  justify-content: space-between;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+.summary__items li span {
+  color: var(--clr-grey-300);
+}
+.summary__items li:nth-child(1) {
+  color: var(--clr-red-500);
+  background: var(--clr-red-100);
+}
+.summary__items li:nth-child(2) {
+  color: var(--clr-yellow-500);
+  background: var(--clr-yellow-100);
+}
+.summary__items li:nth-child(3) {
+  color: var(--clr-teal-500);
+  background: var(--clr-teal-100);
+}
+.summary__items li:nth-child(4) {
+  color: var(--clr-blue-500);
+  background: var(--clr-blue-100);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
 body {
   font-family: "Hanken Grotesk";
+  height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
 }
 
 /*# sourceMappingURL=main.css.map */

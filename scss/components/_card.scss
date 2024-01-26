@@ -1,0 +1,8 @@
+@use "../abstracts/colors";
+.card {
+  border-radius: 0 0 1rem 1rem;
+  align-items: stretch !important;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: colors.$shadow;
+}

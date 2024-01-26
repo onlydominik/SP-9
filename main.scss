@@ -1,6 +1,11 @@
 @use "./scss/abstracts/" as *;
 @use "./scss/base/" as *;
+@use "./scss/components/" as *;
+@use "./scss/utilities/" as *;
 
 body {
   font-family: "Hanken Grotesk";
+  height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
 }
