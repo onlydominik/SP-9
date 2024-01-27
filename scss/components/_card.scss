@@ -1,8 +1,15 @@
 @use "../abstracts/colors";
+@use "../abstracts/breakpoints";
 .card {
-  border-radius: 0 0 1rem 1rem;
   align-items: stretch !important;
   text-align: center;
   overflow: hidden;
   box-shadow: colors.$shadow;
+  flex-direction: column;
+
+  @include breakpoints.md {
+    flex-direction: row;
+    width: clamp(200px, 90%, 50em);
+    border-radius: 1rem;
+  }
 }
