@@ -41,22 +41,25 @@ strong:after {
   --clr-grey-200: hsla(0, 0%, 100%, 0.616);
   --clr-grey-300: hsl(0, 0%, 62%);
   --clr-grd-blue-100: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  --clr-grd-blue-500: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  --clr-grd-blue-500: linear-gradient(
+    hsl(256, 72%, 46%),
+    hsla(241, 72%, 46%, 0)
+  );
 }
 
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(/fonts/static/HankenGrotesk-Medium.ttf);
+  src: url(./fonts/static/HankenGrotesk-Medium.ttf);
   font-weight: 500;
 }
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(/fonts/static/HankenGrotesk-Bold.ttf);
+  src: url(./fonts/static/HankenGrotesk-Bold.ttf);
   font-weight: 700;
 }
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url(/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  src: url(./fonts/static/HankenGrotesk-ExtraBold.ttf);
   font-weight: 800;
 }
 :root {
@@ -77,7 +80,9 @@ strong:after {
   font-size: 100%;
 }
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
   all: unset;
   display: revert;
 }
@@ -109,14 +114,14 @@ img {
 /* revert for bug in Chromium browsers
  - fix for the content editable attribute will work properly.
  - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
