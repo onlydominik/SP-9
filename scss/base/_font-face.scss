@@ -7,7 +7,7 @@ $fonts: (
 @each $name, $value in $fonts {
   @font-face {
     font-family: "Hanken Grotesk";
-    src: url(./fonts/static/HankenGrotesk-#{$name}.ttf);
+    src: url(../fonts/static/HankenGrotesk-#{$name}.ttf);
     font-weight: #{$value};
   }
 }
