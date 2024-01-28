@@ -9,7 +9,7 @@
 
   @include breakpoints.md {
     flex-direction: row;
-    width: clamp(200px, 90%, 50em);
+    width: clamp(200px, 90%, 40em);
     border-radius: 1rem;
   }
 }
